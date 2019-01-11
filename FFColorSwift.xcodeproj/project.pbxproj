@@ -8,17 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		D35D9F8821E882BB00794B25 /* FFColorSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D9F8721E882BB00794B25 /* FFColorSwift.swift */; };
+		D35D9F9221E89EA000794B25 /* FFColorSwift_Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = D35D9F9021E89EA000794B25 /* FFColorSwift_Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D38E268321E73BBE00340F50 /* FFColorSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = D38E268121E73BBE00340F50 /* FFColorSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D35D9F8721E882BB00794B25 /* FFColorSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFColorSwift.swift; sourceTree = "<group>"; };
-		D38E267E21E73BBE00340F50 /* FFColorSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFColorSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D35D9F8E21E89EA000794B25 /* FFColorSwift_Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFColorSwift_Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D35D9F9021E89EA000794B25 /* FFColorSwift_Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFColorSwift_Mac.h; sourceTree = "<group>"; };
+		D35D9F9121E89EA000794B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D38E267E21E73BBE00340F50 /* FFColorSwift_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFColorSwift_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38E268121E73BBE00340F50 /* FFColorSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFColorSwift.h; sourceTree = "<group>"; };
 		D38E268221E73BBE00340F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D35D9F8B21E89EA000794B25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D38E267B21E73BBE00340F50 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +48,20 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		D35D9F8F21E89EA000794B25 /* FFColorSwift-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				D35D9F9021E89EA000794B25 /* FFColorSwift_Mac.h */,
+				D35D9F9121E89EA000794B25 /* Info.plist */,
+			);
+			path = "FFColorSwift-Mac";
+			sourceTree = "<group>";
+		};
 		D38E267421E73BBE00340F50 = {
 			isa = PBXGroup;
 			children = (
 				D38E268021E73BBE00340F50 /* FFColorSwift */,
+				D35D9F8F21E89EA000794B25 /* FFColorSwift-Mac */,
 				D38E267F21E73BBE00340F50 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,7 +69,8 @@
 		D38E267F21E73BBE00340F50 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D38E267E21E73BBE00340F50 /* FFColorSwift.framework */,
+				D38E267E21E73BBE00340F50 /* FFColorSwift_iOS.framework */,
+				D35D9F8E21E89EA000794B25 /* FFColorSwift_Mac.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +88,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		D35D9F8921E89EA000794B25 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D35D9F9221E89EA000794B25 /* FFColorSwift_Mac.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D38E267921E73BBE00340F50 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,9 +107,27 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D38E267D21E73BBE00340F50 /* FFColorSwift */ = {
+		D35D9F8D21E89EA000794B25 /* FFColorSwift-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D38E268621E73BBE00340F50 /* Build configuration list for PBXNativeTarget "FFColorSwift" */;
+			buildConfigurationList = D35D9F9321E89EA000794B25 /* Build configuration list for PBXNativeTarget "FFColorSwift-Mac" */;
+			buildPhases = (
+				D35D9F8921E89EA000794B25 /* Headers */,
+				D35D9F8A21E89EA000794B25 /* Sources */,
+				D35D9F8B21E89EA000794B25 /* Frameworks */,
+				D35D9F8C21E89EA000794B25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FFColorSwift-Mac";
+			productName = "FFColorSwift-Mac";
+			productReference = D35D9F8E21E89EA000794B25 /* FFColorSwift_Mac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D38E267D21E73BBE00340F50 /* FFColorSwift-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D38E268621E73BBE00340F50 /* Build configuration list for PBXNativeTarget "FFColorSwift-iOS" */;
 			buildPhases = (
 				D38E267921E73BBE00340F50 /* Headers */,
 				D38E267A21E73BBE00340F50 /* Sources */,
@@ -90,9 +138,9 @@
 			);
 			dependencies = (
 			);
-			name = FFColorSwift;
+			name = "FFColorSwift-iOS";
 			productName = FFColorSwift;
-			productReference = D38E267E21E73BBE00340F50 /* FFColorSwift.framework */;
+			productReference = D38E267E21E73BBE00340F50 /* FFColorSwift_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -104,6 +152,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = JonyFang;
 				TargetAttributes = {
+					D35D9F8D21E89EA000794B25 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					D38E267D21E73BBE00340F50 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
@@ -122,12 +173,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D38E267D21E73BBE00340F50 /* FFColorSwift */,
+				D38E267D21E73BBE00340F50 /* FFColorSwift-iOS */,
+				D35D9F8D21E89EA000794B25 /* FFColorSwift-Mac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D35D9F8C21E89EA000794B25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D38E267C21E73BBE00340F50 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,6 +197,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D35D9F8A21E89EA000794B25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D38E267A21E73BBE00340F50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,6 +215,58 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		D35D9F9421E89EA000794B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 26SQZQ89WS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "FFColorSwift-Mac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonyfang.FFColorSwift-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D35D9F9521E89EA000794B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 26SQZQ89WS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "FFColorSwift-Mac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonyfang.FFColorSwift-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D38E268421E73BBE00340F50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -327,6 +445,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D35D9F9321E89EA000794B25 /* Build configuration list for PBXNativeTarget "FFColorSwift-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D35D9F9421E89EA000794B25 /* Debug */,
+				D35D9F9521E89EA000794B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D38E267821E73BBE00340F50 /* Build configuration list for PBXProject "FFColorSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -336,7 +463,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D38E268621E73BBE00340F50 /* Build configuration list for PBXNativeTarget "FFColorSwift" */ = {
+		D38E268621E73BBE00340F50 /* Build configuration list for PBXNativeTarget "FFColorSwift-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D38E268721E73BBE00340F50 /* Debug */,
